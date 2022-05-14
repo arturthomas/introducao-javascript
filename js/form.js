@@ -14,31 +14,16 @@ botaoAdicionar.addEventListener("click",function(event){
     var erros = validaPaciente(paciente);
     console.log(erros);
     if(erros.length > 0){ //length é o tamanho da string
-        exibeMensagemDeErro(erros);
+        exibeMensagensDeErro(erros);
         return;//o return vasio força sair da função e não execulta a o restante do codigo
     }
-
-    //criar um variavel que ler a tabela
-    var tabela = document.querySelector("#tabela-pacientes");
-
-    //colocar meus dados do formulario como filho da tag tabela
-    tabela.appendChild(pacienteTr);
+    adicionaPacienteNaTabela(paciente)
 
     form.reset();
 
     var mensagensErro = document.querySelector("#mensagens-erro");
     mensagensErro.innerHTML = "";
 });
-
-function exibeMensagemDeErro(erros){
-    var ul = document.querySelector("#mensagens-erro");
-    ul.innerHTML = "";//innerHTML em branco apagar toda conteudo HTML 
-    erros.forEach(function(erro){
-        var li = document.createElement("li");
-        li.textContent=erro;
-        ul.appendChild(li);
-    })
-}
 
 function obtemPacienteDoFormulario(form){
     var paciente={
@@ -115,4 +100,10 @@ function exibeMensagensDeErro(erros) {
         li.textContent = erro;
         ul.appendChild(li);
     });
+}
+//sdljfslkdjfsdjflskjdf\/
+function adicionaPacienteNaTabela(paciente) {
+    var pacienteTr = montaTr(paciente);
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
 }

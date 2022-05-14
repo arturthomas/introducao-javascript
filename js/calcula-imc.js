@@ -1,5 +1,6 @@
 var titulo = document.querySelector(".titulo"); // pega uma elementa da pagina e joga dentro da variavel
-titulo.textContent = "Diovana Fisioterapia"//altera o valor que está dentro da variavel selecionada
+// titulo.textContent = "Diovana Fisioterapia"; //ALTERA O TITULO
+
 var pacientes = document.querySelectorAll(".paciente");//estou puscando apenas o id do conteudo da tag td do html
 for (var i = 0; i < pacientes.length; i++) { //o length é numero da posição do meu array de pacientes
     

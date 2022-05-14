@@ -17,8 +17,11 @@ campoFiltro.addEventListener("input", function(){
 
             var nome = tdNome.textContent;//extraindo o conteudo de texto que está na classe info-nome, que neste caso está salvo na variavel tdNome
 
+            //criando uma variavel para usar o objeto do JS RegExp
+            var expressao = new RegExp(this.value,"i"); 
+            
             //verificar se o nome do paciente é diferente do valor digitado
-            if (nome != this.value){
+            if ( !expressao.test(nome)){//O objeto expressao tem a função .test para testar o valor da expressao
                 //se o nome é diferente adiciona a classe inisivel para sumir os demais paciente
                 paciente.classList.add("invisivel");
             } else {//se o nome NÃO for diferente remove a classe invisivel
