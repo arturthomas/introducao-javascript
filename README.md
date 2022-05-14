@@ -1,3 +1,4 @@
 # introducao-javascript
  Estudos de Java Script na Alura
-![image](https://user-images.githubusercontent.com/64720056/168443161-d7abd294-15ec-4b0c-971e-6f56b61c3847.png)
+ 
+![image](https://user-images.githubusercontent.com/64720056/168443241-76022198-6aaf-437e-8d1c-e6c705d46ca9.png)
